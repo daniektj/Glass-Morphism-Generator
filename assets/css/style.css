@@ -40,7 +40,7 @@ header{
 .hero{
     width: 100vw;
     height: 60vh;
-    background: var(--darkpurple) url("../images/bg-default.png")no-repeat bottom center;
+    background: var(--darkpurple) url("../images/bg-default.png")no-repeat center center;
     background-size: cover;
 
     display: flex;
