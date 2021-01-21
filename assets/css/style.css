@@ -1,1 +1,47 @@
-/* comentarioooo */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bgcolor: #0F0B21;
+    --purple: #7269FF;
+    --darkpurple: #221C44;
+    --text-principal: white;
+    --text-secondary: #7F78A7;
+    --font-principal: 'Roboto', sans-serif;
+  }
+
+body{
+    background-color: var(--bgcolor);
+    color: var(--text-principal);
+    font-family: var(--font-principal);
+}
+
+header{
+    width: 100vw;
+    height: 55px;
+    background-color: var(--purple);
+}
+
+.hero{
+    width: 100vw;
+    height: 600px;
+    background-color: white;
+    background: url("../images/bg-default.png")no-repeat bottom center;
+    background-size: cover;
+}
+
+.controls-section{
+    width: 100vw;
+}
+
+.controls-container{
+    width: 600px;
+    height: 250px;
+    background-color: var(--darkpurple);
+    border: 2px solid var(--purple);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: -40px;
+}
