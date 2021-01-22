@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   margin: 0;
   padding: 0;
@@ -140,3 +141,95 @@ how to remove the virtical space around the range input in IE*/
   font-weight: 600;
   margin: 0px 10px;
 }
+=======
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ------- VARIABLES ------- */
+:root {
+    --bgcolor: #0F0B21;
+    --purple: #7269FF;
+    --darkpurple: #221C44;
+    --text-principal: white;
+    --text-secondary: #7F78A7;
+    --font-principal: 'Roboto', sans-serif;
+  }
+
+
+/* ------- BODY ------- */
+body{
+    height: 100%;
+    background-color: var(--bgcolor);
+    color: var(--text-principal);
+    font-family: var(--font-principal);
+}
+
+
+/* ------- HEADER ------- */
+header{
+   /*  width: 100vw; */
+    height: 55px;
+    background-color: var(--purple);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+}
+
+
+/* ------- HERO SECTION ------- */
+.hero{
+    width: 100vw;
+    height: 60vh;
+    background: var(--darkpurple) url("../images/bg-default.png")no-repeat center center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-container{
+    width: 700px;
+    height: 375px;
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+
+/* ------- CONTROLS SECTION ------- */
+.controls-section{
+    width: 100vw;
+}
+
+.controls-container{
+    width: 600px;
+    height: 250px;
+    background-color: var(--darkpurple);
+    border: 2px solid var(--purple);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: -40px;
+}
+
+
+/* ------- FOOTER ------- */
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    
+    padding: 0 50px 30px 0;
+    /* border: 1px red solid; */
+}
+>>>>>>> 3c57fd0f5c6455cae85e184fc6ee9f17dea44f64
