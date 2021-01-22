@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glass Morphism</title>
-</head>
-<body>
-    
-</body>
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container__glass">
+      <div class="glass" id="glass"></div>
+    </div>
+    <div class="container__controls">
+      <div class="controls__wrap">
+        <div class="controls__inputs">
+          <div class="control__input-info">
+            <p>Opacity</p>
+            <input type="range" min="0" max="500" value="250" class="slider" id="tamano" />
+          </div>
+          <div class="control__input-info">
+            <p>Blur</p>
+            <input type="range" min="0" max="20" value="4" class="slider" id="blur" />
+          </div>
+          <div class="control__input-info">
+            <p>Border</p>
+            <input type="range" min="0" max="100" value="10" class="slider" id="transparencia" />
+          </div>
+          <div class="control__input-info">
+            <p>Backgroung Image</p>
+            <input type="range" min="0" max="500" value="250" class="slider" id="tamano" />
+          </div>
+          <div class="control__input-info">
+            <p>Glass Color</p>
+            <input type="range" min="0" max="20" value="4" class="slider" id="blur" />
+          </div>
+          <div class="control__input-info">
+            <p>Border Radius</p>
+            <input type="range" min="0" max="100" value="10" class="slider" id="transparencia" />
+          </div>
+        </div>
+
+        <input type="color" value="#000000" />
+        <p class="textos" id="TextWidth">Width: 250 px</p>
+        <p class="textos" id="TextBlur">Blur: 4 px</p>
+        <p class="textos" id="TransparenciaText">Transparencia: 0.10 px</p>
+      </div>
+    </div>
+  </body>
+  <script src="assets/js/app.js"></script>
 </html>
