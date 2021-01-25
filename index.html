@@ -1,55 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glass Morphism</title>
-<<<<<<< HEAD
-    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <div class="container__glass">
-      <div class="glass" id="glass"></div>
-    </div>
-    <div class="container__controls">
-      <div class="controls__wrap">
-        <div class="controls__inputs">
-          <div class="control__input-info">
-            <p>Opacity</p>
-            <input type="range" min="0" max="500" value="250" class="slider" id="tamano" />
-          </div>
-          <div class="control__input-info">
-            <p>Blur</p>
-            <input type="range" min="0" max="20" value="4" class="slider" id="blur" />
-          </div>
-          <div class="control__input-info">
-            <p>Border</p>
-            <input type="range" min="0" max="100" value="10" class="slider" id="transparencia" />
-          </div>
-          <div class="control__input-info">
-            <p>Backgroung Image</p>
-            <input type="range" min="0" max="500" value="250" class="slider" id="tamano" />
-          </div>
-          <div class="control__input-info">
-            <p>Glass Color</p>
-            <input type="range" min="0" max="20" value="4" class="slider" id="blur" />
-          </div>
-          <div class="control__input-info">
-            <p>Border Radius</p>
-            <input type="range" min="0" max="100" value="10" class="slider" id="transparencia" />
-          </div>
-        </div>
-
-        <input type="color" value="#000000" />
-        <p class="textos" id="TextWidth">Width: 250 px</p>
-        <p class="textos" id="TextBlur">Blur: 4 px</p>
-        <p class="textos" id="TransparenciaText">Transparencia: 0.10 px</p>
-      </div>
-    </div>
-  </body>
-  <script src="assets/js/app.js"></script>
-</html>
-=======
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -71,7 +25,98 @@
     </section>
 
     <section class="controls-section">
-        <div class="controls-container"></div>
+        <div class="controls-container">
+
+            <div class="controls__inputs">
+                
+                <div class="control__input-info">
+                  <p>Opacity</p>
+                  <div class="range_data">
+                    <span class="range_data--text">01</span>
+                    <span class="range_data--text">09</span>
+                  </div>
+                  <input type="range" min="0" max="500" value="250" class="slider" id="tamano" />
+                </div>
+                
+                <div class="control__input-info">
+                  <p>Blur</p>
+                  <div class="range_data">
+                    <span class="range_data--text">-</span>
+                    <span class="range_data--text">08</span>
+                    <span class="range_data--text">+</span>
+                </div>
+                  <input type="range" min="0" max="20" value="4" class="slider" id="blur" />
+                </div>
+                
+                <div class="control__input-info">
+                  <p>Border</p>
+                  <div class="range_data">
+                    <span class="range_data--text">-</span>
+                    <span class="range_data--text">08</span>
+                    <span class="range_data--text">+</span>
+                </div>
+                  <input type="range" min="0" max="100" value="10" class="slider" id="transparencia" />
+                </div>
+                
+                <div class="control__input-info">
+                  <p>Backgroung Image</p>
+                  <input type="text" value="http://www.imagen.com/picture" class="slider" id="bgInput" />
+                </div>
+                
+                <div class="control__input-info">
+                  <p>Glass Color</p>
+                  <div class="glass_color_container">
+                      <input type="color" value="#000000" class="visual_color_input" id="blur" />
+                      <input type="text" value="#000000" class="text_input_color">
+                  </div>
+                </div>
+                
+                <div class="control__input-info">
+                  <p>Border Radius</p>
+                  <div class="range_data">
+                    <span class="range_data--text">-</span>
+                    <span class="range_data--text">08</span>
+                    <span class="range_data--text">+</span>
+                </div>
+                  <input type="range" min="0" max="100" value="10" class="slider" id="transparencia" />
+                </div>
+            
+
+
+            </div>
+
+            <div class="switchs">
+                
+              <div class="switch_general_container">
+                <span>Image</span>
+                <DIV class="switch_container">
+                  <input type="checkbox" id="switch" /><label for="switch"></label>
+                  <span class="switch_internal_text">OFF    ON</span>
+                </DIV>
+              </div>
+                <!-- <input type="checkbox" name="switch-button" class="switch-button__checkbox"> -->
+                
+                <div class="switch_general_container">
+                  <span>Text</span>
+                  <DIV class="switch_container">
+                    <input type="checkbox" id="switch" /><label for="switch"></label>
+                    <span class="switch_internal_text">OFF    ON</span>
+                  </DIV>
+                </div>
+
+            </div>
+
+            <button class="generator_button">
+                <div class="generator_button--uptext">
+                    <span class="generator_button--codetext">&lt;glass&gt;</span>
+                    <span class="text02">CODE</span>
+                    <span class="generator_button--codetext">&lt;/glass&gt;</span>
+                </div>
+                <span class="text01">GENERATOR</span>
+            </button>
+
+
+        </div>
     </section>
 
     <footer>
@@ -86,4 +131,3 @@
     <script src="assets/js/app.js"></script>    
 </body>
 </html>
->>>>>>> 3c57fd0f5c6455cae85e184fc6ee9f17dea44f64

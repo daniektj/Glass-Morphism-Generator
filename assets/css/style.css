@@ -1,147 +1,3 @@
-<<<<<<< HEAD
-body {
-  margin: 0;
-  padding: 0;
-  color: white;
-  font-family: Helvetica;
-  background-color: #0c082a;
-}
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container__glass {
-  height: 65vh;
-  background: url("../img/image\ 3.png");
-  background-size: cover;
-}
-
-.container__controls {
-  top: -50px;
-  display: flex;
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-}
-
-.controls__wrap {
-  width: 40vw;
-  height: 25vh;
-  padding: 20px 30px;
-  border-radius: 10px;
-  background: #221c44;
-  box-sizing: border-box;
-  border: 2px solid #6c63ff;
-}
-
-/* ESTE CODIGO LO SAQUE DE UN GENERADOR DE INTERNET, NO LE PARES MUCHA BOLA */
-input[type="range"] {
-  width: 100%;
-  background-color: transparent;
-  -webkit-appearance: none;
-}
-
-input[type="range"]:focus {
-  outline: none;
-}
-input[type="range"]::-webkit-slider-runnable-track {
-  background: #6c63ff;
-  border: 0;
-  border-radius: 10.6px;
-  width: 20%;
-  height: 10.8px;
-  cursor: pointer;
-}
-input[type="range"]::-webkit-slider-thumb {
-  margin-top: -6.6px;
-  width: 24px;
-  height: 24px;
-  background: #6c63ff;
-  border: 3px solid #221c44;
-  border-radius: 31px;
-  cursor: pointer;
-  -webkit-appearance: none;
-}
-input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #847dff;
-}
-input[type="range"]::-moz-range-track {
-  background: #6c63ff;
-  border: 0;
-  border-radius: 10.6px;
-  width: 100%;
-  height: 10.8px;
-  cursor: pointer;
-}
-input[type="range"]::-moz-range-thumb {
-  width: 24px;
-  height: 24px;
-  background: #6c63ff;
-  border: 3px solid #221c44;
-  border-radius: 31px;
-  cursor: pointer;
-}
-input[type="range"]::-ms-track {
-  background: transparent;
-  border-color: transparent;
-  border-width: 7.6px 0;
-  color: transparent;
-  width: 100%;
-  height: 10.8px;
-  cursor: pointer;
-}
-input[type="range"]::-ms-fill-lower {
-  background: #5449ff;
-  border: 0;
-  border-radius: 21.2px;
-}
-input[type="range"]::-ms-fill-upper {
-  background: #6c63ff;
-  border: 0;
-  border-radius: 21.2px;
-}
-input[type="range"]::-ms-thumb {
-  width: 24px;
-  height: 24px;
-  background: #6c63ff;
-  border: 3px solid #221c44;
-  border-radius: 31px;
-  cursor: pointer;
-  margin-top: 0px;
-  /*Needed to keep the Edge thumb centred*/
-}
-input[type="range"]:focus::-ms-fill-lower {
-  background: #6c63ff;
-}
-input[type="range"]:focus::-ms-fill-upper {
-  background: #847dff;
-}
-/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
-how to remove the virtical space around the range input in IE*/
-@supports (-ms-ime-align: auto) {
-  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-  input[type="range"] {
-    margin: 0;
-    /*Edge starts the margin from the thumb, not the track as other browsers do*/
-  }
-}
-
-/* EL CODIGO DE ARRIBA LO SAQUE DE UN GENERADOR DE INTERNET, NO LE PARES MUCHA BOLA */
-
-.controls__inputs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.control__input-info {
-  width: 29%;
-  font-weight: 600;
-  margin: 0px 10px;
-}
-=======
 *{
     margin: 0;
     padding: 0;
@@ -208,12 +64,310 @@ header{
 
 .controls-container{
     width: 600px;
-    height: 250px;
+    height: 220px;
+    position: relative;
     background-color: var(--darkpurple);
     border: 2px solid var(--purple);
     border-radius: 10px;
     margin: auto;
     margin-top: -40px;
+}
+
+/* ------ RANGE INPUTS CONTAINER ------ */
+.controls__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    padding-bottom: 0px;
+/*     border: 1px red solid; */
+  }
+
+.control__input-info {
+    width: 150px;
+    font-weight: 600;
+    margin: 0px 10px;
+    margin-bottom: 25px;
+    /* border: 1px orange solid; */
+}
+
+/* ------ RANGE INPUTS ------ */
+
+input[type="range"] {
+    width: 100%;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+  
+  input[type="range"]:focus {
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: #6c63ff;
+    border: 0;
+    border-radius: 5px;
+    width: 20%;
+    height: 8px;
+    cursor: pointer;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    margin-top: -6px;
+    width: 20px;
+    height: 20px;
+    background: #6c63ff;
+    border: 3px solid #221c44;
+    border-radius: 30px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #847dff;
+  }
+  input[type="range"]::-moz-range-track {
+    background: #6c63ff;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 10.8px;
+    cursor: pointer;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #6c63ff;
+    border: 3px solid #221c44;
+    border-radius: 31px;
+    cursor: pointer;
+  }
+  input[type="range"]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 7.6px 0;
+    color: transparent;
+    width: 100%;
+    height: 10.8px;
+    cursor: pointer;
+  }
+  input[type="range"]::-ms-fill-lower {
+    background: #5449ff;
+    border: 0;
+    border-radius: 21.2px;
+  }
+  input[type="range"]::-ms-fill-upper {
+    background: #6c63ff;
+    border: 0;
+    border-radius: 21.2px;
+  }
+  input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #6c63ff;
+    border: 3px solid #221c44;
+    border-radius: 31px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+  }
+  input[type="range"]:focus::-ms-fill-lower {
+    background: #6c63ff;
+  }
+  input[type="range"]:focus::-ms-fill-upper {
+    background: #847dff;
+  }
+  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  how to remove the virtical space around the range input in IE*/
+  @supports (-ms-ime-align: auto) {
+    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+    input[type="range"] {
+      margin: 0;
+      /*Edge starts the margin from the thumb, not the track as other browsers do*/
+    }
+  }
+
+
+
+/* ------ INFORMATION TEXT OF RANGE INPUTS ------ */
+.range_data{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.range_data--text{
+    color: var(--text-secondary);
+    font-size: .75rem;
+    margin-bottom: -5px;
+}
+
+
+
+/* ------ BACKGROUND IMAGE INPUT ------ */
+#bgInput{
+  height: 23px;
+  color: var(--text-secondary);
+  background-color: var(--bgcolor);
+  border: 2px solid var(--purple);
+  padding-left: 5px;
+}
+
+#bgInput:focus{
+  color: var(--purple);
+  color: white;
+  outline: none;
+}
+
+
+/* ------ GLASS COLOR INPUTS ------ */
+.glass_color_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.visual_color_input{
+    width: 60px;
+    background-color: var(--bgcolor);
+    border: 2px solid var(--purple);
+}
+
+.visual_color_input:hover{
+  cursor: pointer;
+}
+
+.visual_color_input:focus{
+  outline: none;
+}
+
+.text_input_color{
+    width: 70px;
+    height: 23px;
+    text-align: center;
+    color: var(--text-secondary);
+    background-color: var(--bgcolor);
+    border: 2px solid var(--purple);
+}
+
+.text_input_color:focus{
+  outline: none;
+  color: white;
+}
+
+
+/* ------ SWITCH INPUTS ------ */
+.switchs{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  /* border: 1px red solid; */
+}
+
+
+.switch_general_container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* border: 1px red solid; */
+}
+
+.switch_container{
+  width: 50px;
+  height: 25px;
+  position: relative;
+  /* border: 1px red solid; */
+}
+
+.switch_internal_text{
+  font-size: .60rem;
+  color: var(--purple);
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  z-index: 1;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 25px;
+	background: var(--bgcolor);
+	display: block;
+  border-radius: 3px;
+  border: 2px solid var(--purple);
+  /* position: relative; */
+  position: absolute;
+  top: 0px;
+
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 2.5px;
+	left: 2.5px;
+	width: 20px;
+	height: 20px;
+	background: var(--purple);
+	border-radius: 3px;
+  transition: 0.3s;
+  z-index: 9;
+}
+
+input:checked + label {
+	background: var(--bgcolor);
+}
+
+input:checked + label:after {
+	left: calc(100% - 2.5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 30px;
+}
+
+
+
+/* ------ CODE GENERATOR BUTTON ------ */
+.generator_button{
+  display: block;
+  width: 150px;
+  height: 50px;
+  border: 0px solid var(--purple);
+  border-radius: 10px;
+  background-color: var(--purple);
+
+  position: absolute;
+  bottom: -25px;
+  left: calc(50% - 75px);
+  color: white;
+  cursor: pointer;
+}
+
+.generator_button:hover{
+  box-shadow: 0 0 10px #7369ff79;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.generator_button:focus{
+  outline: none;
+}
+
+.generator_button--uptext{
+  color: var(--bgcolor);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.generator_button--codetext{
+  font-size: 0.5rem;
 }
 
 
@@ -232,4 +386,3 @@ footer{
     padding: 0 50px 30px 0;
     /* border: 1px red solid; */
 }
->>>>>>> 3c57fd0f5c6455cae85e184fc6ee9f17dea44f64
