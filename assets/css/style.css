@@ -56,6 +56,14 @@ header{
     border-radius: 10px;
 }
 
+.glass-container__text{
+  padding: 40px;
+}
+
+#lorem_text, #glass_title{
+  text-shadow: 0px 2px 3px black;
+}
+
 
 /* ------- CONTROLS SECTION ------- */
 .controls-section{
