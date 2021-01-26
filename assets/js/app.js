@@ -3,12 +3,12 @@ const hero = document.getElementById("hero");
 const hex = document.getElementById("input_hexColor");
 const rgb = document.getElementById("input_rgbColor");
 const glass_box = document.querySelector(".glass-container");
-
 const input_border_radius = document.getElementById("input_radius");
 const input_blur = document.getElementById("input_blur");
 const input_border = document.getElementById("input_border");
 const input_opacity = document.getElementById("input_opacity");
 const input_background = document.getElementById("bgInput");
+
 
 /* --- ASIGNACION DE VALORES POR DEFAULT EN EL GLASS BOX --- */
 glass_box.style.setProperty('backdrop-filter', `blur(8px)`); 
@@ -80,8 +80,6 @@ rgb.addEventListener('input', () => {
     hex.value = `${rgb.value}`;
     glass_box.style.setProperty('background-color', `rgba(${hex2rgb()} ${parseInt(input_opacity.value)/1000})`);
 });
-
-
 
 
 
