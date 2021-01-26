@@ -13,7 +13,7 @@ const controls_container = document.querySelector(".controls__inputs");
 
 /* --- ASIGNACION DE VALORES POR DEFAULT EN EL GLASS BOX --- */
 glass_box.style.setProperty('backdrop-filter', `blur(8px)`); 
-glass_box.style.setProperty('background-color', `rgba(255, 255, 255, 0.025)`); 
+glass_box.style.setProperty('background-color', `rgba(0, 191, 255, 0.025)`); 
 glass_box.style.setProperty('box-shadow', `2px 8px 8px rgba(0,0,0,0.3)`); 
 glass_box.style.setProperty('border', `2px rgba(255,255,255,0.4) solid`); 
 glass_box.style.setProperty('border-bottom', `2px rgba(40,40,40,0.35) solid`); 
@@ -23,16 +23,16 @@ glass_box.style.setProperty('border-right', `2px rgba(40,40,40,0.35) solid`);
 /* --- SINCRONIZACION DE DATOS ENTRE DOM Y JS --- */
 // con esto sincronizamos los valores de los Range Inputs
 // junto con los valores previamente establecidos al glass box.
-input_opacity.value = "25";
+input_opacity.value = "75";
 document.getElementById("opacity_data").textContent = `${parseInt(input_opacity.value)/1000}`;
 
 input_border_radius.value = "10";
 document.getElementById("radius_data").textContent = `${input_border_radius.value}px`;
 
-input_blur.value = "4";
+input_blur.value = "5";
 document.getElementById("blur_data").textContent = `${input_blur.value}px`;
 
-input_blur.value = "2";
+input_border.value = "2";
 document.getElementById("border_data").textContent = `${input_border.value}px`;
 
 
