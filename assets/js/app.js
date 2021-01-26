@@ -65,6 +65,10 @@ input_background.addEventListener('input', () => {
     hero.style.setProperty('background-image', `url("${input_background.value}")`);
 });
 
+input_background.addEventListener('click', () => {
+    document.getElementById("bgInput").select(); 
+});
+
 /* --- HEX INPUT --- */
 hex.addEventListener('input', () => {
     /* console.log(hex2rgb()); */
