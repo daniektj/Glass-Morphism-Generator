@@ -1,5 +1,7 @@
 /* --- DECLARACION DE VARIABLES --- */
 const hero = document.getElementById("hero");
+const hex = document.getElementById("input_hexColor");
+const rgb = document.getElementById("input_rgbColor");
 const glass_box = document.querySelector(".glass-container");
 
 const input_border_radius = document.getElementById("input_radius");
@@ -33,7 +35,7 @@ document.getElementById("border_data").textContent = `${input_border.value}px`;
 
 /* --- OPACITY INPUT RANGO --- */
 input_opacity.addEventListener('input', () => {
-    glass_box.style.setProperty('background-color', `rgba(255, 255, 255, ${parseInt(input_opacity.value)/1000})`);
+    glass_box.style.setProperty('background-color', `rgba(${hex2rgb()} ${parseInt(input_opacity.value)/1000})`);
     document.getElementById("opacity_data").textContent = `${(input_opacity.value)/1000}`;
 });
 
@@ -58,9 +60,47 @@ input_border_radius.addEventListener('input', () => {
 });
 
 
-
-
-/* --- BORDER RADIUS INPUT RANGO --- */
+/* --- BACKGROUND INPUT --- */
 input_background.addEventListener('input', () => {
     hero.style.setProperty('background-image', `url("${input_background.value}")`);
 });
+
+/* --- HEX INPUT --- */
+hex.addEventListener('input', () => {
+    /* console.log(hex2rgb()); */
+    glass_box.style.setProperty('background-color', `rgba(${hex2rgb()} ${(input_opacity.value)/1000}`); 
+    rgb.value = `${hex.value}`;
+    input_opacity
+});
+
+/* --- RGB INPUT --- */
+rgb.addEventListener('input', () => {
+    /* console.log(hex2rgb()); */
+    /* glass_box.style.setProperty('background-color', `rgba(${hex2rgb()} ${(input_opacity.value)/1000}`);  */
+    hex.value = `${rgb.value}`;
+    glass_box.style.setProperty('background-color', `rgba(${hex2rgb()} ${parseInt(input_opacity.value)/1000})`);
+});
+
+
+
+
+
+
+/* --- FUNCION QUE CONVIERTE EL COLOR HEX A RGB --- */
+function hex2rgb() {
+    var hex_color = document.getElementById('input_hexColor').value;
+    var rgb_color;
+    var pattern_color = "^#([A-Fa-f0-9]{6})$";
+    
+    if (hex_color.match(pattern_color)) {
+        var hex_color = hex_color.replace("#", "")
+            , r = parseInt(hex_color.substring(0, 2), 16)
+            , g = parseInt(hex_color.substring(2, 4), 16)
+            , b = parseInt(hex_color.substring(4, 6), 16);
+        return rgb_color = r + ',' + g + ',' + b + ',';
+    }
+    else {
+        console.log('Error Color Format');
+    }
+}
+

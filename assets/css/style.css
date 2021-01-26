@@ -277,6 +277,7 @@ input[type="range"] {
     color: var(--text-secondary);
     background-color: var(--bgcolor);
     border: 2px solid var(--purple);
+    text-transform:uppercase;
 }
 
 .text_input_color:focus{
