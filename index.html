@@ -32,30 +32,31 @@
                 <div class="control__input-info">
                   <p>Opacity</p>
                   <div class="range_data">
-                    <span class="range_data--text">01</span>
-                    <span class="range_data--text">09</span>
+                    <span class="range_data--text">-</span>
+                    <span class="range_data--text" id="opacity_data">08</span>
+                    <span class="range_data--text">+</span>
                   </div>
-                  <input type="range" min="0" max="500" value="250" class="slider" id="tamano" />
+                  <input type="range" min="0" max="500" value="25" class="slider" id="input_opacity" />
                 </div>
                 
                 <div class="control__input-info">
                   <p>Blur</p>
                   <div class="range_data">
                     <span class="range_data--text">-</span>
-                    <span class="range_data--text">08</span>
+                    <span class="range_data--text" id="blur_data">08</span>
                     <span class="range_data--text">+</span>
                 </div>
-                  <input type="range" min="0" max="20" value="4" class="slider" id="blur" />
+                  <input type="range" min="0" max="20" value="4" class="slider" id="input_blur" />
                 </div>
                 
                 <div class="control__input-info">
                   <p>Border</p>
                   <div class="range_data">
                     <span class="range_data--text">-</span>
-                    <span class="range_data--text">08</span>
+                    <span class="range_data--text" id="border_data">08</span>
                     <span class="range_data--text">+</span>
                 </div>
-                  <input type="range" min="0" max="100" value="10" class="slider" id="transparencia" />
+                  <input type="range" min="0" max="10" value="2" class="slider" id="input_border" />
                 </div>
                 
                 <div class="control__input-info">
@@ -87,7 +88,7 @@
               <div class="switch_general_container">
                 <span>Image</span>
                 <DIV class="switch_container">
-                  <input type="checkbox" id="switch" /><label for="switch"></label>
+                  <input type="checkbox" id="switch" /><label for="switch" id="pepa"></label>
                   <span class="switch_internal_text">OFF    ON</span>
                 </DIV>
               </div>
@@ -96,7 +97,7 @@
                 <div class="switch_general_container">
                   <span>Text</span>
                   <DIV class="switch_container">
-                    <input type="checkbox" id="switch" /><label for="switch"></label>
+                    <input type="checkbox" id="switch" /><label for="switch" id="pepe"></label>
                     <span class="switch_internal_text">OFF    ON</span>
                   </DIV>
                 </div>

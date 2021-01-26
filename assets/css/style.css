@@ -51,8 +51,8 @@ header{
 .glass-container{
     width: 700px;
     height: 375px;
-    background-color: rgba(0, 0, 0, 0.45);
-    border: 1px solid white;
+    /* background-color: rgba(0, 0, 0, 0.45); */
+    border: 2px solid white;
     border-radius: 10px;
 
     display: flex;
@@ -339,6 +339,8 @@ label {
   top: 0px;
 
 }
+
+
 
 label:after {
 	content: '';
