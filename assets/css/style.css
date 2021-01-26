@@ -54,14 +54,39 @@ header{
     background-color: rgba(0, 0, 0, 0.45);
     border: 1px solid white;
     border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.glass-container__profile{
+  width: 200px;
+  height: 200px;
+  /* border: 1px red solid; */
+  background: url('../images/profile-04.png') no-repeat center center;
+  background-size: cover;
 }
 
 .glass-container__text{
-  padding: 40px;
+  width: 370px;
+  height: 200px;
+  /* padding: 40px; */
+  /* border: 1px red solid; */
+}
+
+h2{
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#lorem_text{
+  text-align: justify;
 }
 
 #lorem_text, #glass_title{
-  text-shadow: 0px 2px 3px black;
+  text-shadow: 0px 0px 5px black, 1px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 
