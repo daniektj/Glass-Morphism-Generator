@@ -1,9 +1,12 @@
 /* --- DECLARACION DE VARIABLES --- */
+const hero = document.getElementById("hero");
 const glass_box = document.querySelector(".glass-container");
+
 const input_border_radius = document.getElementById("input_radius");
 const input_blur = document.getElementById("input_blur");
 const input_border = document.getElementById("input_border");
 const input_opacity = document.getElementById("input_opacity");
+const input_background = document.getElementById("bgInput");
 
 /* --- ASIGNACION DE VALORES POR DEFAULT EN EL GLASS BOX --- */
 glass_box.style.setProperty('backdrop-filter', `blur(8px)`); 
@@ -52,4 +55,12 @@ input_border.addEventListener('input', () => {
 input_border_radius.addEventListener('input', () => {
     glass_box.style.setProperty('border-radius', `${input_border_radius.value}px`);
     document.getElementById("radius_data").textContent = `${input_border_radius.value}px`;
+});
+
+
+
+
+/* --- BORDER RADIUS INPUT RANGO --- */
+input_background.addEventListener('input', () => {
+    hero.style.setProperty('background-image', `url("${input_background.value}")`);
 });
