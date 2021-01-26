@@ -8,6 +8,7 @@ const input_blur = document.getElementById("input_blur");
 const input_border = document.getElementById("input_border");
 const input_opacity = document.getElementById("input_opacity");
 const input_background = document.getElementById("bgInput");
+const controls_container = document.querySelector(".controls__inputs");
 
 
 /* --- ASIGNACION DE VALORES POR DEFAULT EN EL GLASS BOX --- */
@@ -19,7 +20,9 @@ glass_box.style.setProperty('border-bottom', `2px rgba(40,40,40,0.35) solid`);
 glass_box.style.setProperty('border-right', `2px rgba(40,40,40,0.35) solid`); 
 
 
-/* --- CONEXCION DE DATOS ENTRE DOM Y JS --- */
+/* --- SINCRONIZACION DE DATOS ENTRE DOM Y JS --- */
+// con esto sincronizamos los valores de los Range Inputs
+// junto con los valores previamente establecidos al glass box.
 input_opacity.value = "25";
 document.getElementById("opacity_data").textContent = `${parseInt(input_opacity.value)/1000}`;
 
@@ -33,43 +36,40 @@ input_blur.value = "2";
 document.getElementById("border_data").textContent = `${input_border.value}px`;
 
 
-/* --- OPACITY INPUT RANGO --- */
-input_opacity.addEventListener('input', () => {
+/* --- EVENTO CONTROLADOR DE INPUTS --- */
+controls_container.addEventListener('input', () => {
+
+    /* --- OPACITY INPUT RANGO --- */
     glass_box.style.setProperty('background-color', `rgba(${hex2rgb()} ${parseInt(input_opacity.value)/1000})`);
     document.getElementById("opacity_data").textContent = `${(input_opacity.value)/1000}`;
-});
 
-/* --- BLUR INPUT RANGO --- */
-input_blur.addEventListener('input', () => {
+    /* --- BLUR INPUT RANGO --- */
     glass_box.style.setProperty('backdrop-filter', `blur(${input_blur.value}px)`);
     document.getElementById("blur_data").textContent = `${input_blur.value}px`;
-});
 
-/* --- BORDER INPUT RANGO --- */
-input_border.addEventListener('input', () => {
+    /* --- BORDER INPUT RANGO --- */
     glass_box.style.setProperty('border', `${input_border.value}px rgba(255,255,255,0.4) solid`);
     glass_box.style.setProperty('border-bottom', `${input_border.value}px rgba(40,40,40,0.35) solid`);
     glass_box.style.setProperty('border-right', `${input_border.value}px rgba(40,40,40,0.35) solid`);
     document.getElementById("border_data").textContent = `${input_border.value}px`;
-});
 
-/* --- BORDER RADIUS INPUT RANGO --- */
-input_border_radius.addEventListener('input', () => {
+    /* --- BORDER RADIUS INPUT RANGO --- */
     glass_box.style.setProperty('border-radius', `${input_border_radius.value}px`);
     document.getElementById("radius_data").textContent = `${input_border_radius.value}px`;
 });
 
 
-/* --- BACKGROUND INPUT --- */
+/* --- EVENTO BACKGROUND INPUT --- */
 input_background.addEventListener('input', () => {
     hero.style.setProperty('background-image', `url("${input_background.value}")`);
 });
 
+/* --- EVENTO SELECTOR DE TEXTO EN BACKGROUND INPUT --- */
 input_background.addEventListener('click', () => {
     document.getElementById("bgInput").select(); 
 });
 
-/* --- HEX INPUT --- */
+/* --- EVENTO HEX INPUT --- */
 hex.addEventListener('input', () => {
     /* console.log(hex2rgb()); */
     glass_box.style.setProperty('background-color', `rgba(${hex2rgb()} ${(input_opacity.value)/1000}`); 
@@ -77,7 +77,7 @@ hex.addEventListener('input', () => {
     input_opacity
 });
 
-/* --- RGB INPUT --- */
+/* --- EVENTO RGB INPUT --- */
 rgb.addEventListener('input', () => {
     /* console.log(hex2rgb()); */
     /* glass_box.style.setProperty('background-color', `rgba(${hex2rgb()} ${(input_opacity.value)/1000}`);  */
