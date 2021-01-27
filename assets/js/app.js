@@ -126,9 +126,7 @@ btnSwitch_image.addEventListener("click", () => {
 
 
 
-
-
-
+/* --- CODE GENERATOR --- */
 document.querySelector('.generator_button').addEventListener('click', ()=> {
     document.querySelector('.code_text').textContent = `<!-- This was made with GlassGenerator.netlify.app -->
 <div class="glass-container" id="glass"></div>`;
@@ -152,19 +150,27 @@ document.querySelector('.generator_button').addEventListener('click', ()=> {
 });
 
 
+/* --- CARGADOR DE BACKGROUNDS --- */
 
+var bgNumber = 1;
 
-/* --bgcolor: #0F0B21;
---purple: #7269FF;
---darkpurple: #221C44;
---text-principal: white;
---text-secondary: #7F78A7;
---font-principal: 'Roboto', sans-serif;
- */
+arrow_right.onclick = handler;
+arrow_left.onclick = handler;
 
+function handler() { 
+  var test = this.id; 
+  console.log(test) 
 
-
-
-
-
-
+    if(test == 'arrow_right'){
+        if(bgNumber <= 3){
+            bgNumber++
+            console.log(bgNumber);
+        }
+    } else if(test == 'arrow_left'){
+        if(bgNumber >= 2){
+            bgNumber--
+            console.log(bgNumber);
+        }
+    }
+    hero.style.setProperty('background-image', `url("assets/images/bg-default-0${bgNumber}.png")`);
+}
