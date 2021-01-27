@@ -326,89 +326,7 @@ input[type="range"] {
   color: white;
 }
 
-
 /* ------ SWITCH INPUTS ------ */
-/* .switchs{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 25px;
-}
-
-
-.switch_general_container{
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.switch_container{
-  width: 50px;
-  height: 25px;
-  position: relative;
-}
-
-.switch_internal_text{
-  font-size: .60rem;
-  color: var(--purple);
-  position: absolute;
-  top: 9px;
-  left: 5px;
-  z-index: 1;
-}
-
-input[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
-}
-
-label {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 50px;
-	height: 25px;
-	background: var(--bgcolor);
-	display: block;
-  border-radius: 3px;
-  border: 2px solid var(--purple);
-
-  position: absolute;
-  top: 0px;
-
-}
-
-
-
-label:after {
-	content: '';
-	position: absolute;
-	top: 2.5px;
-	left: 2.5px;
-	width: 20px;
-	height: 20px;
-	background: var(--purple);
-	border-radius: 3px;
-  transition: 0.3s;
-  z-index: 9;
-}
-
-input:checked + label {
-	background: var(--bgcolor);
-}
-
-input:checked + label:after {
-	left: calc(100% - 2.5px);
-	transform: translateX(-100%);
-}
-
-label:active:after {
-	width: 30px;
-}
- */
-
-
- /* ------ SWITCH INPUTS ------ */
 .switchs {
   display: flex;
   justify-content: space-between;
@@ -505,36 +423,7 @@ label:active:after {
   font-size: 0.5rem;
 }
 
-
-/* ------- FOOTER ------- */
-footer{
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-}
-
-.footer-links{
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    
-    padding: 0 50px 30px 0;
-    /* border: 1px red solid; */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ------- MODAL CONTAINER ------- */
 .modal {
   visibility: hidden;
   opacity: 0;
@@ -590,6 +479,7 @@ footer{
 .code_title{
   color: var(--purple);
   text-shadow: 1px 1.5px 2px black;
+  font-weight: bolder;
   /* margin-bottom: -50px; */
   /* border: 1px red solid; */
 }
@@ -598,6 +488,7 @@ footer{
   display: block;
   color: var(--text-secondary);
   font-size: 0.75rem;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -610,3 +501,18 @@ footer{
   font-size: 25px;
 }
 
+/* ------- FOOTER ------- */
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  
+  padding: 0 50px 30px 0;
+  /* border: 1px red solid; */
+}
