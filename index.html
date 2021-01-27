@@ -16,6 +16,7 @@
     </header>
 
     <section class="hero" id="hero">
+      <figure class="arrows left"></figure>
         <div class="glass-container" id="glass">
             <figure class="glass-container__profile" id="profile"></figure>
             <div class="glass-container__text" id="text">
@@ -23,6 +24,7 @@
                 <p id="lorem_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
             </div>
         </div>
+      <figure class="arrows right"></figure>
     </section>
 
     <section class="controls-section">
@@ -84,36 +86,60 @@
                 </div>
             </div>
 
+
+            <!-- SWITCH'S BUTTONS -->
             <div class="switchs">
               <div class="container__button-switch">
                 <span>Image</span>
                 <button class="switch" id="switch_image">
-                  <span>ON</span>
                   <span>OFF</span>
+                  <span>ON</span>
                 </button>
               </div>
               <div class="container__button-switch">
                   <span>text</span>
                   <button class="switch" id="switch_text">
-                    <span>ON</span>
                     <span>OFF</span>
+                    <span>ON</span>
                   </button>
                 </div>           
             </div>
-    
 
-            </div>
-
-            <button class="generator_button">
+            <!-- MODAL CONTAINER -->
+              <a href="#demo-modal" class="generator_button">
                 <div class="generator_button--uptext">
                     <span class="generator_button--codetext">&lt;glass&gt;</span>
                     <span class="text02">CODE</span>
                     <span class="generator_button--codetext">&lt;/glass&gt;</span>
                 </div>
                 <span class="text01">GENERATOR</span>
-            </button>
+              </a>
+            <!-- </button> -->
         </div>
     </section>
+
+
+
+    <div id="demo-modal" class="modal">
+      <div class="modal__content">
+        
+        <span class="code_title">HTML</span>
+        <pre>
+          <code class="code_text"></code>
+        </pre>
+        <span class="code_title">CSS</span>
+        <pre>
+          <code class="code_text css" id="code_text2"></code>
+        </pre>
+        <span class="thanks_text">Thank you for using our glass generator, we hope this makes your job easier. </span>
+        <a href="#" class="modal__close">&times;</a>
+      </div>
+  </div>
+
+
+
+<!-- This was made with GlassGenerator.netlify.app -->
+
 
     <footer>
         <div class="footer-links">
