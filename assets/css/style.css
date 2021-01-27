@@ -1,241 +1,244 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* ------- VARIABLES ------- */
 :root {
-    --bgcolor: #0F0B21;
-    --purple: #7269FF;
-    --darkpurple: #221C44;
-    --text-principal: white;
-    --text-secondary: #7F78A7;
-    --font-principal: 'Roboto', sans-serif;
-  }
-
+  --bgcolor: #0f0b21;
+  --purple: #7269ff;
+  --darkpurple: #221c44;
+  --text-principal: white;
+  --text-secondary: #7f78a7;
+  --font-principal: "Roboto", sans-serif;
+}
 
 /* ------- BODY ------- */
-body{
-    height: 100%;
-    background-color: var(--bgcolor);
-    color: var(--text-principal);
-    font-family: var(--font-principal);
+body {
+  height: 100%;
+  background-color: var(--bgcolor);
+  color: var(--text-principal);
+  font-family: var(--font-principal);
 }
-
 
 /* ------- HEADER ------- */
-header{
-   /*  width: 100vw; */
-    height: 55px;
-    background-color: var(--purple);
+header {
+  /*  width: 100vw; */
+  height: 55px;
+  background-color: var(--purple);
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 50px;
 }
-
 
 /* ------- HERO SECTION ------- */
-.hero{
-    width: 100vw;
-    height: 60vh;
-    background: var(--darkpurple) url("../images/bg-default.png")no-repeat center center;
-    background-size: cover;
+.hero {
+  width: 100vw;
+  height: 65vh;
+  background: var(--darkpurple) url("../images/bg-default.png") no-repeat center center;
+  background-size: cover;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.glass-container{
-    width: 700px;
-    height: 375px;
-    /* background-color: rgba(0, 0, 0, 0.45); */
-    border: 2px solid white;
-    border-radius: 10px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+.glass-container {
+  width: 700px;
+  height: 375px;
+  /* background-color: rgba(0, 0, 0, 0.45); */
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.glass-container__profile{
+.glass-container__profile {
   width: 200px;
   height: 200px;
+  visibility: initial;
   /* border: 1px red solid; */
-  background: url('../images/profile-04.png') no-repeat center center;
+  background: url("../images/profile-04.png") no-repeat center center;
   background-size: cover;
 }
 
-.glass-container__text{
+.visibility__profile {
+  visibility: hidden;
+}
+
+.glass-container__text {
   width: 370px;
   height: 200px;
+  visibility: initial;
+
   /* padding: 40px; */
   /* border: 1px red solid; */
 }
 
-h2{
+.visibility__text {
+  visibility: hidden;
+}
+
+h2 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
-#lorem_text{
+#lorem_text {
   text-align: justify;
 }
 
-#lorem_text, #glass_title{
+#lorem_text,
+#glass_title {
   text-shadow: 0px 0px 5px black, 1px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-
 /* ------- CONTROLS SECTION ------- */
-.controls-section{
-    width: 100vw;
+.controls-section {
+  width: 100vw;
 }
 
-.controls-container{
-    width: 600px;
-    height: 220px;
-    position: relative;
-    background-color: var(--darkpurple);
-    border: 2px solid var(--purple);
-    border-radius: 10px;
-    margin: auto;
-    margin-top: -40px;
+.controls-container {
+  width: 600px;
+  height: 220px;
+  position: relative;
+  background-color: var(--darkpurple);
+  border: 2px solid var(--purple);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: -40px;
 }
 
 /* ------ RANGE INPUTS CONTAINER ------ */
 .controls__inputs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-    padding-bottom: 0px;
-/*     border: 1px red solid; */
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  padding-bottom: 0px;
+  /*     border: 1px red solid; */
+}
 
 .control__input-info {
-    width: 150px;
-    font-weight: 600;
-    margin: 0px 10px;
-    margin-bottom: 25px;
-    /* border: 1px orange solid; */
+  width: 150px;
+  font-weight: 600;
+  margin: 0px 10px;
+  margin-bottom: 25px;
+  /* border: 1px orange solid; */
 }
 
 /* ------ RANGE INPUTS ------ */
 
 input[type="range"] {
-    width: 100%;
-    background-color: transparent;
-    -webkit-appearance: none;
-  }
-  
-  input[type="range"]:focus {
-    outline: none;
-  }
-  input[type="range"]::-webkit-slider-runnable-track {
-    background: #6c63ff;
-    border: 0;
-    border-radius: 5px;
-    width: 20%;
-    height: 8px;
-    cursor: pointer;
-  }
-  input[type="range"]::-webkit-slider-thumb {
-    margin-top: -6px;
-    width: 20px;
-    height: 20px;
-    background: #6c63ff;
-    border: 3px solid #221c44;
-    border-radius: 30px;
-    cursor: pointer;
-    -webkit-appearance: none;
-  }
-  input[type="range"]:focus::-webkit-slider-runnable-track {
-    background: #847dff;
-  }
-  input[type="range"]::-moz-range-track {
-    background: #6c63ff;
-    border: 0;
-    border-radius: 5px;
-    width: 100%;
-    height: 10.8px;
-    cursor: pointer;
-  }
-  input[type="range"]::-moz-range-thumb {
-    width: 24px;
-    height: 24px;
-    background: #6c63ff;
-    border: 3px solid #221c44;
-    border-radius: 31px;
-    cursor: pointer;
-  }
-  input[type="range"]::-ms-track {
-    background: transparent;
-    border-color: transparent;
-    border-width: 7.6px 0;
-    color: transparent;
-    width: 100%;
-    height: 10.8px;
-    cursor: pointer;
-  }
-  input[type="range"]::-ms-fill-lower {
-    background: #5449ff;
-    border: 0;
-    border-radius: 21.2px;
-  }
-  input[type="range"]::-ms-fill-upper {
-    background: #6c63ff;
-    border: 0;
-    border-radius: 21.2px;
-  }
-  input[type="range"]::-ms-thumb {
-    width: 20px;
-    height: 20px;
-    background: #6c63ff;
-    border: 3px solid #221c44;
-    border-radius: 31px;
-    cursor: pointer;
-    margin-top: 0px;
-    /*Needed to keep the Edge thumb centred*/
-  }
-  input[type="range"]:focus::-ms-fill-lower {
-    background: #6c63ff;
-  }
-  input[type="range"]:focus::-ms-fill-upper {
-    background: #847dff;
-  }
-  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  width: 100%;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #6c63ff;
+  border: 0;
+  border-radius: 5px;
+  width: 20%;
+  height: 8px;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  margin-top: -6px;
+  width: 20px;
+  height: 20px;
+  background: #6c63ff;
+  border: 3px solid #221c44;
+  border-radius: 30px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #847dff;
+}
+input[type="range"]::-moz-range-track {
+  background: #6c63ff;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 10.8px;
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #6c63ff;
+  border: 3px solid #221c44;
+  border-radius: 31px;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 7.6px 0;
+  color: transparent;
+  width: 100%;
+  height: 10.8px;
+  cursor: pointer;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #5449ff;
+  border: 0;
+  border-radius: 21.2px;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #6c63ff;
+  border: 0;
+  border-radius: 21.2px;
+}
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: #6c63ff;
+  border: 3px solid #221c44;
+  border-radius: 31px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #6c63ff;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #847dff;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
   how to remove the virtical space around the range input in IE*/
-  @supports (-ms-ime-align: auto) {
-    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-    input[type="range"] {
-      margin: 0;
-      /*Edge starts the margin from the thumb, not the track as other browsers do*/
-    }
+@supports (-ms-ime-align: auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type="range"] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
   }
-
-
+}
 
 /* ------ INFORMATION TEXT OF RANGE INPUTS ------ */
-.range_data{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.range_data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.range_data--text{
-    color: var(--text-secondary);
-    font-size: .75rem;
-    margin-bottom: -5px;
+.range_data--text {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  margin-bottom: -5px;
 }
-
-
 
 /* ------ BACKGROUND IMAGE INPUT ------ */
-#bgInput{
+#bgInput {
   height: 23px;
   color: var(--text-secondary);
   background-color: var(--bgcolor);
@@ -243,135 +246,100 @@ input[type="range"] {
   padding-left: 5px;
 }
 
-#bgInput:focus{
+#bgInput:focus {
   color: white;
   outline: none;
 }
 
-
 /* ------ GLASS COLOR INPUTS ------ */
-.glass_color_container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.glass_color_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.visual_color_input{
-    width: 60px;
-    background-color: var(--bgcolor);
-    border: 2px solid var(--purple);
+.visual_color_input {
+  width: 60px;
+  background-color: var(--bgcolor);
+  border: 2px solid var(--purple);
 }
 
-.visual_color_input:hover{
+.visual_color_input:hover {
   cursor: pointer;
 }
 
-.visual_color_input:focus{
+.visual_color_input:focus {
   outline: none;
 }
 
-.text_input_color{
-    width: 70px;
-    height: 23px;
-    text-align: center;
-    color: var(--text-secondary);
-    background-color: var(--bgcolor);
-    border: 2px solid var(--purple);
-    text-transform:uppercase;
+.text_input_color {
+  width: 70px;
+  height: 23px;
+  text-align: center;
+  color: var(--text-secondary);
+  background-color: var(--bgcolor);
+  border: 2px solid var(--purple);
+  text-transform: uppercase;
 }
 
-.text_input_color:focus{
+.text_input_color:focus {
   outline: none;
   color: white;
 }
 
-
 /* ------ SWITCH INPUTS ------ */
-.switchs{
+.switchs {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0px 25px;
-  /* border: 1px red solid; */
+  margin: 0 30px;
+}
+.switch {
+  color: var(--text-secondary);
+  width: 60px;
+  height: 25px;
+  border: 1px solid var(--purple);
+  display: flex;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 3px;
+  font-size: 0.7em;
+  background: var(--bgcolor);
+  justify-content: space-around;
 }
 
+.switch::after {
+  top: 2px;
+  right: 1px;
+  content: "";
+  left: unset;
+  width: 30px;
+  height: 20px;
+  display: block;
+  border-radius: 3px;
+  position: absolute;
+  background: var(--purple);
+  transition: 0.3s ease all;
+}
 
-.switch_general_container{
+.container__button-switch {
   display: flex;
   align-items: center;
-  gap: 20px;
-  /* border: 1px red solid; */
 }
 
-.switch_container{
-  width: 50px;
-  height: 25px;
-  position: relative;
-  /* border: 1px red solid; */
+.active__image::after {
+  right: unset;
+  left: 0;
+  content: "";
 }
 
-.switch_internal_text{
-  font-size: .60rem;
-  color: var(--purple);
-  position: absolute;
-  top: 9px;
-  left: 5px;
-  z-index: 1;
+.active__text::after {
+  right: unset;
+  left: 0;
+  content: "";
 }
-
-input[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
-}
-
-label {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 50px;
-	height: 25px;
-	background: var(--bgcolor);
-	display: block;
-  border-radius: 3px;
-  border: 2px solid var(--purple);
-  /* position: relative; */
-  position: absolute;
-  top: 0px;
-
-}
-
-
-
-label:after {
-	content: '';
-	position: absolute;
-	top: 2.5px;
-	left: 2.5px;
-	width: 20px;
-	height: 20px;
-	background: var(--purple);
-	border-radius: 3px;
-  transition: 0.3s;
-  z-index: 9;
-}
-
-input:checked + label {
-	background: var(--bgcolor);
-}
-
-input:checked + label:after {
-	left: calc(100% - 2.5px);
-	transform: translateX(-100%);
-}
-
-label:active:after {
-	width: 30px;
-}
-
-
-
 /* ------ CODE GENERATOR BUTTON ------ */
-.generator_button{
+.generator_button {
   display: block;
   width: 150px;
   height: 50px;
@@ -380,44 +348,43 @@ label:active:after {
   background-color: var(--purple);
 
   position: absolute;
-  bottom: -25px;
+  bottom: 50px;
   left: calc(50% - 75px);
   color: white;
   cursor: pointer;
 }
 
-.generator_button:hover{
+.generator_button:hover {
   box-shadow: 0 0 10px #7369ff79;
-  border: 1px solid rgba(255, 255, 255, 0.20);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.generator_button:focus{
+.generator_button:focus {
   outline: none;
 }
 
-.generator_button--uptext{
+.generator_button--uptext {
   color: var(--bgcolor);
   font-size: 0.75rem;
   font-weight: bold;
 }
 
-.generator_button--codetext{
+.generator_button--codetext {
   font-size: 0.5rem;
 }
 
-
 /* ------- FOOTER ------- */
-footer{
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
 }
 
-.footer-links{
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    
-    padding: 0 50px 30px 0;
-    /* border: 1px red solid; */
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+
+  padding: 0 50px 30px 0;
+  /* border: 1px red solid; */
 }

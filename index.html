@@ -17,8 +17,8 @@
 
     <section class="hero" id="hero">
         <div class="glass-container" id="glass">
-            <figure class="glass-container__profile"></figure>
-            <div class="glass-container__text">
+            <figure class="glass-container__profile" id="profile"></figure>
+            <div class="glass-container__text" id="text">
                 <h2 id="glass_title">Glass Morphism</h2>
                 <p id="lorem_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
             </div>
@@ -85,23 +85,22 @@
             </div>
 
             <div class="switchs">
-                
-              <div class="switch_general_container">
+              <div class="container__button-switch">
                 <span>Image</span>
-                <DIV class="switch_container">
-                  <input type="checkbox" id="switch" /><label for="switch" id="pepa"></label>
-                  <span class="switch_internal_text">OFF    ON</span>
-                </DIV>
+                <button class="switch" id="switch_image">
+                  <span>ON</span>
+                  <span>OFF</span>
+                </button>
               </div>
-                <!-- <input type="checkbox" name="switch-button" class="switch-button__checkbox"> -->
-                
-                <div class="switch_general_container">
-                  <span>Text</span>
-                  <DIV class="switch_container">
-                    <input type="checkbox" id="switch" /><label for="switch" id="pepe"></label>
-                    <span class="switch_internal_text">OFF    ON</span>
-                  </DIV>
-                </div>
+              <div class="container__button-switch">
+                  <span>text</span>
+                  <button class="switch" id="switch_text">
+                    <span>ON</span>
+                    <span>OFF</span>
+                  </button>
+                </div>           
+            </div>
+    
 
             </div>
 
