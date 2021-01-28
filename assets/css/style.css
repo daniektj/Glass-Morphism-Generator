@@ -533,3 +533,134 @@ footer{
   padding: 0 50px 30px 0;
   /* border: 1px red solid; */
 }
+
+
+
+/* ------ RESPONSIVE CONFIGURATION ------ */
+/* ------ RESPONSIVE CONFIGURATION ------ */
+/* ------ RESPONSIVE CONFIGURATION ------ */
+
+@media (max-width: 600px) {
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+   height: 40px;
+   justify-content: center;
+   padding-left: 0px;
+}
+ 
+ .header__logo{
+   width: 150px;
+   background-size: contain;
+ }
+
+.hero{
+  width: 100vw;
+  height: 45vh;
+  background: var(--darkpurple);
+  background-size: cover;
+  justify-content: center;
+}
+
+/* ------ GLASS BOX ------ */
+.glass-container{
+  width: 75vw;
+  height: 60%;
+  }
+
+  .glass-container__text,
+  .glass-container__profile{
+    display: none;
+  }
+
+  /* ------ ARROW CONTROLS ------ */
+  .arrows{
+    width: 30px;
+    height: 30px;
+    margin: 0 15px;
+  }
+
+
+
+/* ------ CONTROLS INPUT ------ */
+  .controls-container{
+    width: 88vw;
+    height: 33vh;
+    margin-top: -15px;
+  }
+
+  .controls__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    padding-bottom: 0px;
+/*     border: 1px red solid; */
+  }
+
+.control__input-info {
+    width: 140px;
+    font-weight: 500;
+    margin: 0px 10px;
+    margin-bottom: 25px;
+    /* border: 1px orange solid; */
+}
+.control__input-info p{
+    font-weight: 500;
+    font-size: .85rem;
+}
+
+.switchs{
+  display: none;
+}
+
+
+
+/* ------ BACKGROUND IMAGE INPUT ------ */
+#bgInput{
+  width: 100%;
+}
+
+/* ------- MODAL CONTAINER ------- */
+.modal__content {
+  width: 80vw;
+  padding: 20px;
+}
+
+.code_text{
+  width: 72vw;
+  font-size: 0.75rem;
+  overflow-x: hidden;
+  }
+
+.css{
+  width: 72vw;
+}
+
+.thanks_text{
+  font-size: 0.80rem;
+}
+
+
+
+/* ------- FOOTER ------- */
+footer{
+  width: 100vw;
+  position: block;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  
+  padding: 0 10px 0px 0;
+}
+
+}
