@@ -3,16 +3,16 @@ const hero = document.getElementById("hero");
 const hex = document.getElementById("input_hexColor");
 const rgb = document.getElementById("input_rgbColor");
 const glass_box = document.querySelector(".glass-container");
+
+const controls_container = document.querySelector(".controls__inputs");
 const input_border_radius = document.getElementById("input_radius");
 const input_blur = document.getElementById("input_blur");
 const input_border = document.getElementById("input_border");
 const input_opacity = document.getElementById("input_opacity");
 const input_background = document.getElementById("bgInput");
-const controls_container = document.querySelector(".controls__inputs");
+
 const btnSwitch_image = document.querySelector("#switch_image");
 const btnSwitch_text = document.querySelector("#switch_text");
-const profile = document.querySelector("#profile");
-const text = document.querySelector("#text");
 
 var bgNumber = getRandomNum(1, 5);
 
@@ -78,7 +78,6 @@ input_background.addEventListener('click', () => {
 
 /* --- EVENTO HEX INPUT --- */
 hex.addEventListener('input', () => {
-    /* console.log(hex2rgb()); */
     glass_box.style.setProperty('background-color', `rgba(${hex2rgb()} ${(input_opacity.value)/1000}`); 
     rgb.value = `${hex.value}`;
     input_opacity
@@ -86,44 +85,22 @@ hex.addEventListener('input', () => {
 
 /* --- EVENTO RGB INPUT --- */
 rgb.addEventListener('input', () => {
-    /* console.log(hex2rgb()); */
-    /* glass_box.style.setProperty('background-color', `rgba(${hex2rgb()} ${(input_opacity.value)/1000}`);  */
     hex.value = `${rgb.value}`;
     glass_box.style.setProperty('background-color', `rgba(${hex2rgb()} ${parseInt(input_opacity.value)/1000})`);
 });
 
 
 
-
-/* --- FUNCION QUE CONVIERTE EL COLOR HEX A RGB --- */
-function hex2rgb() {
-    var hex_color = document.getElementById('input_hexColor').value;
-    var rgb_color;
-    var pattern_color = "^#([A-Fa-f0-9]{6})$";
-    
-    if (hex_color.match(pattern_color)) {
-        var hex_color = hex_color.replace("#", "")
-            , r = parseInt(hex_color.substring(0, 2), 16)
-            , g = parseInt(hex_color.substring(2, 4), 16)
-            , b = parseInt(hex_color.substring(4, 6), 16);
-        return rgb_color = r + ',' + g + ',' + b + ',';
-    }
-    else {
-        console.log('Error Color Format');
-    }
-}
-
-
 /* ---INTERACCION DE BOTONES SWITCH--- */
 btnSwitch_image.addEventListener("click", () => {
     btnSwitch_image.classList.toggle("active__image");
-    profile.classList.toggle("visibility__profile");
+    document.querySelector("#profile").classList.toggle("visibility__profile");
     console.log("me opimiste - opresor >:v");
   })
   
   btnSwitch_text.addEventListener("click", () => {
     btnSwitch_text.classList.toggle("active__text");
-    text.classList.toggle("visibility__text");
+    document.querySelector("#text").classList.toggle("visibility__text");
     console.log("me opimiste de nuevo- opresor >:v");
   })
 
@@ -153,12 +130,18 @@ document.querySelector('.generator_button').addEventListener('click', ()=> {
 });
 
 
-/* --- CARGADOR DE BACKGROUNDS --- */
+/* --- CONTROLES DE BACKGROUNDS --- */
 arrow_right.onclick = handler;
 arrow_left.onclick = handler;
 
+
+// ---- --------- ----
+// ---- FUNCIONES ----
+// ---- --------- ----
+
+
+/* --- FUNCION CONTROLADORA DE BACKGROUND  --- */
 function handler() { 
-    
     // Ejecutamos un operador ternario sin importar cual flecha es clikeada
     // y si cumple la condicion le sumamos 1 a la variable
     // de lo contrario lo retornamos a su valor original.
@@ -166,7 +149,25 @@ function handler() {
     hero.style.setProperty('background-image', `url("assets/images/bg-default-0${bgNumber}.png")`);
 };
 
-/* --- Funcion generadora de Numero Entero Aleatorio --- */
+/* --- FUNCION Generadora de Numero Entero Aleatorio --- */
 function getRandomNum(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
+
+/* --- FUNCION QUE CONVIERTE EL COLOR HEX A RGB --- */
+function hex2rgb() {
+    var hex_color = document.getElementById('input_hexColor').value;
+    var rgb_color;
+    var pattern_color = "^#([A-Fa-f0-9]{6})$";
+    
+    if (hex_color.match(pattern_color)) {
+        var hex_color = hex_color.replace("#", "")
+            , r = parseInt(hex_color.substring(0, 2), 16)
+            , g = parseInt(hex_color.substring(2, 4), 16)
+            , b = parseInt(hex_color.substring(4, 6), 16);
+        return rgb_color = r + ',' + g + ',' + b + ',';
+    }
+    else {
+        console.log('Error Color Format');
+    }
+}
