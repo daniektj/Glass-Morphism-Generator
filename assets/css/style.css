@@ -599,17 +599,16 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    padding: 15px 10px 0 10px;
     padding-bottom: 0px;
-/*     border: 1px red solid; */
   }
 
 .control__input-info {
-    width: 140px;
+    width: 130px;
     font-weight: 500;
     margin: 0px 10px;
     margin-bottom: 25px;
-    /* border: 1px orange solid; */
 }
 .control__input-info p{
     font-weight: 500;
@@ -619,6 +618,7 @@ header{
 .switchs{
   display: none;
 }
+
 
 
 
