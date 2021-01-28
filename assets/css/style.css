@@ -35,6 +35,12 @@ header{
     padding-left: 50px;
 }
 
+.header__logo{
+  width: 214px;
+  height: 30px;
+  background: url(../images/glass-generator-logo.svg) no-repeat center center;
+}
+
 
 /* ------- HERO SECTION ------- */
 .hero{

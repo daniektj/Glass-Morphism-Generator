@@ -14,9 +14,11 @@ const btnSwitch_text = document.querySelector("#switch_text");
 const profile = document.querySelector("#profile");
 const text = document.querySelector("#text");
 
+var bgNumber = getRandomNum(1, 5);
+
 
 /* --- ASIGNACION DE VALORES POR DEFAULT EN EL GLASS BOX --- */
-hero.style.setProperty('background-image', `url("assets/images/bg-default-0${getRandomNum(1, 5) }.png")`);
+hero.style.setProperty('background-image', `url("assets/images/bg-default-0${bgNumber}.png")`);
 glass_box.style.setProperty('backdrop-filter', `blur(8px)`); 
 glass_box.style.setProperty('background-color', `rgba(0, 191, 255, 0.025)`); 
 glass_box.style.setProperty('box-shadow', `2px 8px 8px rgba(0,0,0,0.3)`); 
@@ -152,17 +154,16 @@ document.querySelector('.generator_button').addEventListener('click', ()=> {
 
 
 /* --- CARGADOR DE BACKGROUNDS --- */
-var bgNumber = 1;
-
 arrow_right.onclick = handler;
 arrow_left.onclick = handler;
 
 function handler() { 
-  // Ejecutamos un operador ternario sin importar cual flecha es clikeada
-  // y si cumple la condicion le sumamos 1 a la variable
-  // de lo contrario lo retornamos a su valor original.
-  bgNumber < 4  ? bgNumber++ + console.log(bgNumber) : (bgNumber = 1) + console.log(bgNumber);
-  hero.style.setProperty('background-image', `url("assets/images/bg-default-0${bgNumber}.png")`);
+    
+    // Ejecutamos un operador ternario sin importar cual flecha es clikeada
+    // y si cumple la condicion le sumamos 1 a la variable
+    // de lo contrario lo retornamos a su valor original.
+    bgNumber < 4  ? bgNumber++ + console.log(bgNumber) : (bgNumber = 1) + console.log(bgNumber);
+    hero.style.setProperty('background-image', `url("assets/images/bg-default-0${bgNumber}.png")`);
 };
 
 /* --- Funcion generadora de Numero Entero Aleatorio --- */
