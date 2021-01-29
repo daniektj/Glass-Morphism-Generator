@@ -30,15 +30,35 @@ header{
     background-color: var(--purple);
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 50px;
+    padding: 0 50px;
 }
 
 .header__logo{
   width: 214px;
   height: 30px;
   background: url(../images/glass-generator-logo.svg) no-repeat center center;
+}
+
+.header_github{
+  width: 150px;
+  height: 30px;
+  color: black;
+  font-size: .9rem;
+  font-weight: bold;
+  background: url('../images/star.svg') white no-repeat;
+  background-size: 20px 20px;
+  background-position: 7% center;
+  padding: 0 0px 0 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  /* box-shadow: 2px 3px 0px black; */
+
+  /* border: 3px black solid; */
 }
 
 
