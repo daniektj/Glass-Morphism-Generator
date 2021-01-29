@@ -556,27 +556,10 @@ footer{
 .footer-links{
   width: 100vw;
   display: flex;
-/*   flex-direction: column; */
-  justify-content: center;
-  align-items: center;
-/*   border: 1px red solid; */
-}
-
-.a{
-  width: 100vw;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 60px;
-  /* font-size: .75rem; */
 /*   border: 1px red solid; */
-}
-
-.cof{
-  padding-left: 50px;
-}
-.git{
-  padding-right: 50px;
 }
 
 .coffee{
@@ -597,19 +580,27 @@ footer{
   /* border: 1px red solid; */
 }
 
-.twitter{
-  width: 32px;
-  height: 32px;
-  background: url('../images/twitter.svg') no-repeat center;
-  background-size: cover;
-  /* margin-right: 8px; */
-}
-.twitter_container{
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
+.footer_twitter{
+  width: auto;
+  height: 30px;
+  color: white;
+  font-size: .9rem;
+  font-weight: bold;
+  background: url('../images/twitter.svg') transparent no-repeat;
+  background-size: 20px 20px;
+  background-position: 2% center;
+  /* padding: 0 0px 0 10px; */
+  padding-left: 28px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+  /* border: 3px black solid; */
+} 
 
+.footer_twitter:hover{
+  color:  #00ACEE;
+}
 
 
 /* ------ RESPONSIVE CONFIGURATION ------ */
