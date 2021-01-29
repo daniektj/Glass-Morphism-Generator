@@ -151,6 +151,8 @@ h2{
     border-radius: 10px;
     margin: auto;
     margin-top: -40px;
+    /* border: 1px red solid; */
+    margin-bottom: 50px;
 }
 
 /* ------ RANGE INPUTS CONTAINER ------ */
@@ -408,7 +410,6 @@ input[type="range"] {
   cursor: pointer;
 
   text-decoration: none;
-  /* border: 1px red solid; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -520,18 +521,73 @@ input[type="range"] {
 
 /* ------- FOOTER ------- */
 footer{
-  width: 100%;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0px;
+  /* margin-bottom: 10px; */
+  padding: 15px 0;
+  /* border: 1px red solid; */
 }
 
 .footer-links{
+  width: 100vw;
   display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  
-  padding: 0 50px 30px 0;
+/*   flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+/*   border: 1px red solid; */
+}
+
+.a{
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 60px;
+  /* font-size: .75rem; */
+/*   border: 1px red solid; */
+}
+
+.cof{
+  padding-left: 50px;
+}
+.git{
+  padding-right: 50px;
+}
+
+.coffee{
+  width: 150px;
+  background: url('../images/bmc-full-logo.svg') white no-repeat center;
+  background-size: 140px;
+  padding: 20px 10px;
+  border-radius: 5px;
   /* border: 1px red solid; */
+}
+
+.devs_twitter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 0 60px; */
+  gap: 40px;
+  /* border: 1px red solid; */
+}
+
+.twitter{
+  width: 32px;
+  height: 32px;
+  background: url('../images/twitter.svg') no-repeat center;
+  background-size: cover;
+  /* margin-right: 8px; */
+}
+.twitter_container{
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
 
@@ -648,18 +704,17 @@ header{
 
 
 /* ------- FOOTER ------- */
-footer{
+/* footer{
   width: 100vw;
-  position: block;
-}
+} 
 
-.footer-links{
+ .footer-links{
   display: flex;
   justify-content: center;
   gap: 10px;
   
-  padding: 0 10px 0px 0;
-}
+  padding: 0 0px 0px 0;
+} */
 
 }
 
@@ -686,6 +741,7 @@ footer{
 
   .controls-container{
     width: 88vw;
+    min-width: 350px;
     height: auto;
     padding-bottom: 20px;
   }
@@ -693,4 +749,5 @@ footer{
   .control__input-info {
     width: 130px;
   }
+
 }
