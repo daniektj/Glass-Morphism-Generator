@@ -608,6 +608,7 @@ body{
 header{
    height: 40px;
    justify-content: center;
+   background-position: center center;
    padding-left: 0px;
 }
  
