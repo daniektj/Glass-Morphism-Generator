@@ -627,9 +627,8 @@ body{
 
 header{
    height: 40px;
-   justify-content: center;
-   background-position: center center;
-   padding-left: 0px;
+   justify-content: space-between;
+   padding: 0 20px;
 }
  
  .header__logo{
@@ -642,6 +641,7 @@ header{
   height: 60vh;
   background: var(--darkpurple);
   background-size: cover;
+  background-position: center center;
   justify-content: center;
 }
 
