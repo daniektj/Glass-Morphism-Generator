@@ -540,7 +540,7 @@ footer{
 /* ------ RESPONSIVE CONFIGURATION ------ */
 /* ------ RESPONSIVE CONFIGURATION ------ */
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 
 body{
     width: 100vw;
@@ -562,7 +562,7 @@ header{
 
 .hero{
   width: 100vw;
-  height: 45vh;
+  height: 60vh;
   background: var(--darkpurple);
   background-size: cover;
   justify-content: center;
@@ -590,22 +590,22 @@ header{
 
 /* ------ CONTROLS INPUT ------ */
   .controls-container{
-    width: 88vw;
-    height: 33vh;
+    width: 58vw;
+    height: 23vh;
     margin-top: -15px;
   }
 
   .controls__inputs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 15px 10px 0 10px;
     padding-bottom: 0px;
   }
 
 .control__input-info {
-    width: 130px;
+    width: 160px;
     font-weight: 500;
     margin: 0px 10px;
     margin-bottom: 25px;
@@ -618,8 +618,6 @@ header{
 .switchs{
   display: none;
 }
-
-
 
 
 /* ------ BACKGROUND IMAGE INPUT ------ */
@@ -663,4 +661,36 @@ footer{
   padding: 0 10px 0px 0;
 }
 
+}
+
+@media (max-width: 680px) {
+  .hero{
+    height: 60vh;
+  }
+
+  .controls-container{
+    width: 88vw;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .control__input-info {
+    width: 160px;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero{
+    height: 60vh;
+  } 
+
+  .controls-container{
+    width: 88vw;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .control__input-info {
+    width: 130px;
+  }
 }
