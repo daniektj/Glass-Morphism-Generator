@@ -660,6 +660,7 @@ header{
   .controls-container{
     width: 58vw;
     height: 23vh;
+    /* min-height: 200px; */
     margin-top: -15px;
     /* border: 1px red solid; */
   }
