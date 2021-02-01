@@ -118,7 +118,7 @@ header{
   width: 200px;
   height: 200px;
   /* border: 1px red solid; */
-  background: url('../images/profile-04.jpg') no-repeat center center;
+  background: url('../images/profile-04.png') no-repeat center center;
   background-size: cover;
 }
 
