@@ -18,7 +18,7 @@ var bgNumber = getRandomNum(1, 5);
 
 
 /* --- ASIGNACION DE VALORES POR DEFAULT EN EL GLASS BOX --- */
-hero.style.setProperty('background-image', `url("assets/images/bg-default-0${bgNumber}.png")`);
+hero.style.setProperty('background-image', `url("assets/images/bg-default-0${bgNumber}.jpg")`);
 glass_box.style.setProperty('backdrop-filter', `blur(8px)`); 
 glass_box.style.setProperty('background-color', `rgba(0, 191, 255, 0.025)`); 
 glass_box.style.setProperty('box-shadow', `2px 8px 8px rgba(0,0,0,0.3)`); 
@@ -146,7 +146,7 @@ function handler() {
     // y si cumple la condicion le sumamos 1 a la variable
     // de lo contrario lo retornamos a su valor original.
     bgNumber < 4  ? bgNumber++ + console.log(bgNumber) : (bgNumber = 1) + console.log(bgNumber);
-    hero.style.setProperty('background-image', `url("assets/images/bg-default-0${bgNumber}.png")`);
+    hero.style.setProperty('background-image', `url("assets/images/bg-default-0${bgNumber}.jpg")`);
 };
 
 /* --- FUNCION Generadora de Numero Entero Aleatorio --- */
