@@ -486,13 +486,14 @@ input[type="range"] {
   border: 2px solid var(--purple);
   padding: 25px;
   color: #0F0B21;
+  /* border: 1px red solid; */
 }
 
 .code_text{
   width: 470px;
   height: auto;
   border-radius: 5px;
-/*   border: 1px red solid; */
+  /* border: 1px red solid; */
   font-size: 0.75rem;
   color: var(--text-secondary);
   background-color: var(--bgcolor);
@@ -539,29 +540,48 @@ input[type="range"] {
   font-weight: bolder;
 }
 
-/* --- BOTONES DE COPY--- */
+/* 
+pre{
+  height: 100px;
+  border: 1px red solid
+} */
+
+
+
+
+
+
+/* ------- BOTONES COPY ------- */
 .button_container{
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: flex-end;
-  margin: 0px 15px;
+  flex-direction: column;
+  align-content: center;
+
+/*   border: 1px red solid; */
   position: relative;
-  top: -40px;
 }
 
 .button_copy{
   color: white;
   font-weight: 900;
-  width: 50px;
+  /* width: 50px; */
+  padding: 0 10px;
   height: 30px;
   border: 0px solid var(--purple);
   border-radius: 3px;
   background-color: var(--purple);
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
 }
 
 .button_copy:hover{
   box-shadow: 0 0 10px #7369ff79;
   border: 1px solid rgba(255, 255, 255, 0.20);
 }
+
 /* ------- FOOTER ------- */
 footer{
   width: 100vw;
@@ -722,13 +742,20 @@ header{
 .modal__content {
   width: 80vw;
   padding: 20px;
+  /* border: 2px green solid; */
 }
 
 .code_text{
-  width: 72vw;
+  width: 76vw;
   font-size: 0.75rem;
   overflow-x: hidden;
   }
+
+.button_copy{
+  position: absolute;
+  right: 15px;
+  bottom: -10px;
+}
 
 .css{
   width: 72vw;
@@ -781,3 +808,5 @@ header{
   }
 
 }
+
+
