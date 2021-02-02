@@ -130,6 +130,16 @@ document.querySelector('.generator_button').addEventListener('click', ()=> {
 });
 
 
+/* --- EVENTOS ENCARGADOS DEL BOTON COPY/PASTE --- */
+document.getElementById('copy_buttonHTML').addEventListener('click', ()=>{
+    copyToClipboard('code_text1');
+});
+
+document.getElementById('copy_buttonCSS').addEventListener('click', ()=>{
+    copyToClipboard('code_text2');
+});
+
+
 /* --- CONTROLES DE BACKGROUNDS --- */
 arrow_right.onclick = handler;
 arrow_left.onclick = handler;
@@ -190,22 +200,7 @@ function hex2rgb() {
     }
 }
 
-
-
-
-
-
-document.getElementById('copy_buttonHTML').addEventListener('click', ()=>{
-    copyToClipboard('code_text1');
-});
-
-document.getElementById('copy_buttonCSS').addEventListener('click', ()=>{
-    copyToClipboard('code_text2');
-});
-
-
-
-/* --- BOTONES DE COPY--- */
+/* --- FUNCION BOTON DE COPY/PASTE --- */
 
   function copyToClipboard(x) {
     const str = document.getElementById(x).innerText;
