@@ -539,6 +539,29 @@ input[type="range"] {
   font-weight: bolder;
 }
 
+/* --- BOTONES DE COPY--- */
+.button_container{
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 15px;
+  position: relative;
+  top: -40px;
+}
+
+.button_copy{
+  color: white;
+  font-weight: 900;
+  width: 50px;
+  height: 30px;
+  border: 0px solid var(--purple);
+  border-radius: 3px;
+  background-color: var(--purple);
+}
+
+.button_copy:hover{
+  box-shadow: 0 0 10px #7369ff79;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+}
 /* ------- FOOTER ------- */
 footer{
   width: 100vw;

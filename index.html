@@ -1,156 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glass Morphism</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glass Morphism</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png" />
-</head>
+  <body>
+    <header>
+      <figure class="header__logo"></figure>
+      <a
+        href="https://github.com/daniektj/Glass-Morphism-Generator"
+        role="button"
+        title="Give us a Star"
+        class="header_github"
+        >Star on GitHub</a
+      >
+    </header>
 
-<body>
-
-  <header>
-    <figure class="header__logo"></figure>
-    <a href="https://github.com/daniektj/Glass-Morphism-Generator" role="button" title="Give us a Star" class="header_github">Star on GitHub</a>
-  </header>
-
-  <section class="hero" id="hero">
-    <figure class="arrows left" id="arrow_left" title="Change background"></figure>
-    <div class="glass-container" id="glass">
-      <figure class="glass-container__profile" id="profile"></figure>
-      <div class="glass-container__text" id="text">
-        <h2 id="glass_title">Glass Morphism</h2>
-        <p id="lorem_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting.</p>
-      </div>
-    </div>
-    <figure class="arrows right" id="arrow_right" title="Change background"></figure>
-  </section>
-
-  <section class="controls-section">
-    <div class="controls-container">
-
-      <div class="controls__inputs">
-
-        <div class="control__input-info">
-          <p>Opacity</p>
-          <div class="range_data">
-            <span class="range_data--text">-</span>
-            <span class="range_data--text" id="opacity_data">08</span>
-            <span class="range_data--text">+</span>
-          </div>
-          <input type="range" min="0" max="500" value="75" class="slider" id="input_opacity" />
-        </div>
-
-        <div class="control__input-info">
-          <p>Blur</p>
-          <div class="range_data">
-            <span class="range_data--text">-</span>
-            <span class="range_data--text" id="blur_data">08</span>
-            <span class="range_data--text">+</span>
-          </div>
-          <input type="range" min="0" max="20" value="4" class="slider" id="input_blur" />
-        </div>
-
-        <div class="control__input-info">
-          <p>Border</p>
-          <div class="range_data">
-            <span class="range_data--text">-</span>
-            <span class="range_data--text" id="border_data">08</span>
-            <span class="range_data--text">+</span>
-          </div>
-          <input type="range" min="0" max="10" value="2" class="slider" id="input_border" />
-        </div>
-
-        <div class="control__input-info">
-          <p>Border Radius</p>
-          <div class="range_data">
-            <span class="range_data--text">-</span>
-            <span class="range_data--text" id="radius_data">08</span>
-            <span class="range_data--text">+</span>
-          </div>
-          <input type="range" min="0" max="100" value="10" class="slider" id="input_radius" />
-        </div>
-
-        <div class="control__input-info">
-          <p>Backgroung Image</p>
-          <input type="text" class="slider" placeholder="type here the image url" id="bgInput" />
-        </div>
-
-        <div class="control__input-info">
-          <p>Glass Color</p>
-          <div class="glass_color_container">
-            <input type="color" value="#00BFFF" class="visual_color_input" id="input_rgbColor" />
-            <input type="text" value="#00BFFF" class="text_input_color" id="input_hexColor">
-          </div>
+    <section class="hero" id="hero">
+      <figure class="arrows left" id="arrow_left" title="Change background"></figure>
+      <div class="glass-container" id="glass">
+        <figure class="glass-container__profile" id="profile"></figure>
+        <div class="glass-container__text" id="text">
+          <h2 id="glass_title">Glass Morphism</h2>
+          <p id="lorem_text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting.
+          </p>
         </div>
       </div>
+      <figure class="arrows right" id="arrow_right" title="Change background"></figure>
+    </section>
 
+    <section class="controls-section">
+      <div class="controls-container">
+        <div class="controls__inputs">
+          <div class="control__input-info">
+            <p>Opacity</p>
+            <div class="range_data">
+              <span class="range_data--text">-</span>
+              <span class="range_data--text" id="opacity_data">08</span>
+              <span class="range_data--text">+</span>
+            </div>
+            <input type="range" min="0" max="500" value="75" class="slider" id="input_opacity" />
+          </div>
 
-      <!-- SWITCH'S BUTTONS -->
-      <div class="switchs">
-        <div class="container__button-switch">
-          <span class="switch_name">Image</span>
-          <button class="switch" id="switch_image">
-            <span>OFF</span>
-            <span>ON</span>
-          </button>
+          <div class="control__input-info">
+            <p>Blur</p>
+            <div class="range_data">
+              <span class="range_data--text">-</span>
+              <span class="range_data--text" id="blur_data">08</span>
+              <span class="range_data--text">+</span>
+            </div>
+            <input type="range" min="0" max="20" value="4" class="slider" id="input_blur" />
+          </div>
+
+          <div class="control__input-info">
+            <p>Border</p>
+            <div class="range_data">
+              <span class="range_data--text">-</span>
+              <span class="range_data--text" id="border_data">08</span>
+              <span class="range_data--text">+</span>
+            </div>
+            <input type="range" min="0" max="10" value="2" class="slider" id="input_border" />
+          </div>
+
+          <div class="control__input-info">
+            <p>Border Radius</p>
+            <div class="range_data">
+              <span class="range_data--text">-</span>
+              <span class="range_data--text" id="radius_data">08</span>
+              <span class="range_data--text">+</span>
+            </div>
+            <input type="range" min="0" max="100" value="10" class="slider" id="input_radius" />
+          </div>
+
+          <div class="control__input-info">
+            <p>Backgroung Image</p>
+            <input type="text" class="slider" placeholder="type here the image url" id="bgInput" />
+          </div>
+
+          <div class="control__input-info">
+            <p>Glass Color</p>
+            <div class="glass_color_container">
+              <input type="color" value="#00BFFF" class="visual_color_input" id="input_rgbColor" />
+              <input type="text" value="#00BFFF" class="text_input_color" id="input_hexColor" />
+            </div>
+          </div>
         </div>
-        <div class="container__button-switch">
-          <span class="switch_name">Text</span>
-          <button class="switch" id="switch_text">
-            <span>OFF</span>
-            <span>ON</span>
-          </button>
+
+        <!-- SWITCH'S BUTTONS -->
+        <div class="switchs">
+          <div class="container__button-switch">
+            <span class="switch_name">Image</span>
+            <button class="switch" id="switch_image">
+              <span>OFF</span>
+              <span>ON</span>
+            </button>
+          </div>
+          <div class="container__button-switch">
+            <span class="switch_name">Text</span>
+            <button class="switch" id="switch_text">
+              <span>OFF</span>
+              <span>ON</span>
+            </button>
+          </div>
         </div>
+
+        <!-- MODAL CONTAINER -->
+        <a href="#demo-modal" class="generator_button" title="Generate the code">
+          <div class="generator_button--uptext">
+            <span class="generator_button--codetext">&lt;glass&gt;</span>
+            <span class="text02">CODE</span>
+            <span class="generator_button--codetext">&lt;/glass&gt;</span>
+          </div>
+          <span class="text01">GENERATOR</span>
+        </a>
+        <!-- </button> -->
       </div>
+    </section>
 
-      <!-- MODAL CONTAINER -->
-      <a href="#demo-modal" class="generator_button" title="Generate the code">
-        <div class="generator_button--uptext">
-          <span class="generator_button--codetext">&lt;glass&gt;</span>
-          <span class="text02">CODE</span>
-          <span class="generator_button--codetext">&lt;/glass&gt;</span>
-        </div>
-        <span class="text01">GENERATOR</span>
-      </a>
-      <!-- </button> -->
-    </div>
-  </section>
-
-  <div id="demo-modal" class="modal">
-    <div class="modal__content">
-
-      <span class="code_title">HTML</span>
-      <pre>
-                        <code class="code_text"></code>
+    <div id="demo-modal" class="modal">
+      <div class="modal__content">
+        <span class="code_title">HTML </span>
+        <pre style="height: 90px;">
+                        <code class="code_text" id="code_text1"></code>
+                        <div class="button_container">
+                          <button class="button_copy" onclick="copiarAlPortapapeles('code_text1')" id="copy-html-text">Copy</button>
+                        </div>
                       </pre>
-      <span class="code_title">CSS</span>
-      <pre>
+
+        <span class="code_title">CSS </span>
+        <pre style="height: 330px;">
                         <code class="code_text css" id="code_text2"></code>
+                        <div class="button_container">
+                          <button class="button_copy" onclick="copiarAlPortapapeles('code_text2')" id="copy-html-text">Copy</button>
+                        </div>
                       </pre>
-      <span class="thanks_text">Thank you for using our glass generator, we hope this makes your job easier. </span>
-      <a href="#" class="modal__close">&times;</a>
-    </div>
-  </div>
 
-  <footer>
-    <div class="footer-links">
-        <a href="https://www.buymeacoffee.com/glassgenerator" target="_blank" role="button" class="coffee"></a>
-        <div class="devs_twitter">
-          <a class="footer_twitter" href="http://www.twitter.com/daniektj" role="button" title="Follow Me">DaniekTj</a>
-          <a class="footer_twitter" href="http://www.twitter.com/MariwRios" role="button" title="Follow Me">MariwRios</a>
+        <span class="thanks_text"
+          >Thank you for using our glass generator, we hope this makes your job easier.
+        </span>
+        <a href="#" class="modal__close">&times;</a>
       </div>
     </div>
-  </footer>
 
-  <script src="assets/js/app.js"></script>
-</body>
+    <footer>
+      <div class="footer-links">
+        <a
+          href="https://www.buymeacoffee.com/glassgenerator"
+          target="_blank"
+          role="button"
+          class="coffee"
+        ></a>
+        <div class="devs_twitter">
+          <a
+            class="footer_twitter"
+            href="http://www.twitter.com/daniektj"
+            role="button"
+            title="Follow Me"
+            >DaniekTj</a
+          >
+          <a
+            class="footer_twitter"
+            href="http://www.twitter.com/MariwRios"
+            role="button"
+            title="Follow Me"
+            >MariwRios</a
+          >
+        </div>
+      </div>
+    </footer>
 
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>
