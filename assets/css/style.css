@@ -753,8 +753,8 @@ header{
 
 .button_copy{
   position: absolute;
-  right: 15px;
-  bottom: -10px;
+  right: -2px;
+  bottom: -12px;
 }
 
 .css{
