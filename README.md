@@ -3,10 +3,10 @@ Glass Morphism es un generador que provee el codigo CSS necesario para replicar 
 
 Nos dimos cuenta de que actualmente solo existia un generador para Glass Morphism, sin embargo no da las suficientes herramientas de personalizacion necesarias para satisfacer los gustos y necesidades que se requieren segun el caso con el que hara constraste.
 
-![](assets/images/screenshoot.png)
-
-##Características Personalizables:
+## Características Personalizables:
 - Color.
 - Transparencia.
 - Desenfoque.
 - Grosor y el radio de los bordes.
+
+![](assets/images/screenshoot.png)
